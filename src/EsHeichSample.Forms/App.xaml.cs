@@ -1,7 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using EsHeichSample.Services;
 using EsHeichSample.Views;
 
 namespace EsHeichSample
@@ -13,7 +12,6 @@ namespace EsHeichSample
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 

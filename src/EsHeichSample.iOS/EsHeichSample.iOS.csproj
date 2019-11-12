@@ -132,5 +132,11 @@
     <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
     <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EsHeichSample.Forms\EsHeichSample.Forms.csproj">
+      <Project>{6f9774c1-871b-42af-a6d9-5cf23142cb7c}</Project>
+      <Name>EsHeichSample.Forms</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

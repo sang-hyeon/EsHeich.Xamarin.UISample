@@ -88,5 +88,11 @@
     <AndroidResource Include="Resources\drawable\tab_about.png" />
     <AndroidResource Include="Resources\drawable\tab_feed.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EsHeichSample.Forms\EsHeichSample.Forms.csproj">
+      <Project>{6f9774c1-871b-42af-a6d9-5cf23142cb7c}</Project>
+      <Name>EsHeichSample.Forms</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
