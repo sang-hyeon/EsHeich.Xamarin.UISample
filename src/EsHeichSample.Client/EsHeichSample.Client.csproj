@@ -4,4 +4,8 @@
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="EsHeich.RepositoryPattern" Version="0.1.0" />
+  </ItemGroup>
+
 </Project>
