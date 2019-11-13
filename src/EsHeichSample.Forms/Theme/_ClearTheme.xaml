@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EsHeichSample.Forms.Theme._ClearTheme">
+    <ResourceDictionary>
+        <!--#region Colors-->
+        <Color x:Key="LightBkgColor">White</Color>
+        <Color x:Key="PrimaryColor">Green</Color>
+        <!--#endregion-->
+
+        <Style TargetType="{x:Type Span}">
+            <Setter Property="FontSize" Value="Body"/>
+            <Setter Property="TextColor" Value="Black"/>
+        </Style>
+        
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="Body"/>
+        </Style>
+
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="HeightRequest" Value="40"/>
+            <Setter Property="Padding" Value="15,0"/>
+            <Setter Property="BackgroundColor" Value="Red"/>
+            <Setter Property="BackgroundColor" Value="White"/>
+            <Setter Property="BorderColor" Value="{StaticResource PrimaryColor}"/>
+            <Setter Property="BorderWidth" Value="1"/>
+            <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="States">
+                        <VisualState x:Name="Normal"/>
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="View.Opacity" Value="0.4"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+        
+        <Style TargetType="{x:Type Picker}">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="Body"/>
+        </Style>
+
+        <Style TargetType="{x:Type TimePicker}">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="Body"/>
+        </Style>
+
+        <Style TargetType="{x:Type Entry}">
+            <Setter Property="FontSize" Value="Body"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="PlaceholderColor" Value="LightGray"/>
+        </Style>
+
+        <Style TargetType="{x:Type Grid}">
+            <Setter Property="RowSpacing" Value="0"/>
+            <Setter Property="ColumnSpacing" Value="0"/>
+        </Style>
+
+        <Style TargetType="{x:Type StackLayout}">
+            <Setter Property="Spacing" Value="0"/>
+        </Style>
+        
+    </ResourceDictionary>
+</ResourceDictionary>
