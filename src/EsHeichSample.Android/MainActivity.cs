@@ -14,6 +14,8 @@ namespace EsHeichSample.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            Initialize();
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
@@ -29,6 +31,11 @@ namespace EsHeichSample.Droid
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        private void Initialize()
+        {
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
         }
     }
 }

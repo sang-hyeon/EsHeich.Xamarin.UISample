@@ -34,6 +34,7 @@ namespace EsHeichSample.iOS
         private void Initialize()
         {
             EsHeichSample.iOS.Renderers.ContentControlRenderer.Init();
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
         }
     }
 }
