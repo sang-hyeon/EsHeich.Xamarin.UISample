@@ -10,7 +10,7 @@
              x:Class="EsHeichSample.Views.HomePage"
              Shell.NavBarIsVisible="False"
              ios:Page.UseSafeArea="False"
-             BackgroundColor="DarkGray">
+             BackgroundColor="White">
     <ContentPage.Resources>
         <ResourceDictionary>
             <x:Array x:Key="items" Type="{x:Type Color}">
@@ -35,20 +35,32 @@
                                 <RowDefinition Height="200"/>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
+                            <Label Text="BATMAN" FontAttributes="Bold" FontSize="70" CharacterSpacing="10"
+                                   HorizontalOptions="Center" VerticalOptions="End" TextColor="WhiteSmoke"/>
                             <f:ContentControl Grid.Row="1"
                                               BackgroundColor="{Binding BindingItem}" CornerRadius="10" BorderThickness="0"
                                               Margin="20,50" HasShadow="True" Opacity="{Binding VisibleRate}">
                                 <f:ContentControl.Behaviors>
                                     <f:LinearSacleToBehavior x:TypeArguments="f:ContentControl"
-                                                             Percentage="{Binding VisibleRate}" Min="0" Max="50"
+                                                             Percentage="{Binding VisibleRate}" From="0" To="50"
                                                              TargetProperty="View.TranslationY" Easing="{x:Static Easing.SpringOut}"/>
+                                    <f:ColorScaleToBehavior x:TypeArguments="f:ContentControl"
+                                                            Percentage="{Binding VisibleRate}" From="Black" To="{Binding BindingItem}"
+                                                            TargetProperty="View.BackgroundColor" Easing="{x:Static Easing.Linear}"/>
                                 </f:ContentControl.Behaviors>
                             </f:ContentControl>
                             <f:ImageEx Grid.Row="1" Source="{f:ResourceImage Img.img_batman.png}"  
-                                         WidthRequest="300" HeightRequest="300" TranslationY="0"
+                                         WidthRequest="300" HeightRequest="300"
                                          HorizontalOptions="Center" VerticalOptions="Start"
                                          CacheType="Memory" Opacity="{Binding VisibleRate}">
-                                
+                                <f:ImageEx.Behaviors>
+                                    <f:LinearSacleToBehavior x:TypeArguments="f:ImageEx"
+                                                             Percentage="{Binding VisibleRate}" From="0" To="-100"
+                                                             TargetProperty="View.TranslationY" Easing="{x:Static Easing.CubicInOut}"/>
+                                    <f:LinearSacleToBehavior x:TypeArguments="f:ImageEx"
+                                                             Percentage="{Binding VisibleRate}" From="1.5" To="1"
+                                                             TargetProperty="View.Scale" Easing="{x:Static Easing.Linear}"/>
+                                </f:ImageEx.Behaviors>
                             </f:ImageEx>
                             <Label Grid.Row="1" Text="{Binding VisibleRate, StringFormat='{0:N3}'}" HorizontalOptions="Center" VerticalOptions="Center"/>
                         </Grid>
@@ -56,7 +68,7 @@
                 </CarouselView.ItemTemplate>
             </CarouselView>
 
-            <Label VerticalOptions="Center" BindingContext="{Binding .,Source={x:Reference crv_state}}">
+            <d:Label VerticalOptions="Center" BindingContext="{Binding .,Source={x:Reference crv_state}}">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="{Binding HorizontalOffset}"/>
@@ -72,7 +84,7 @@
                         <Span Text="{Binding RemainingItemsThreshold, Source={x:Reference crv_main}}"/>
                     </FormattedString>
                 </Label.FormattedText>
-            </Label>
+            </d:Label>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
