@@ -37,11 +37,19 @@
                             </Grid.RowDefinitions>
                             <f:ContentControl Grid.Row="1"
                                               BackgroundColor="{Binding BindingItem}" CornerRadius="10" BorderThickness="0"
-                                              Margin="20,50" HasShadow="True" Opacity="{Binding VisibleRate}"/>
+                                              Margin="20,50" HasShadow="True" Opacity="{Binding VisibleRate}">
+                                <f:ContentControl.Behaviors>
+                                    <f:LinearSacleToBehavior x:TypeArguments="f:ContentControl"
+                                                             Percentage="{Binding VisibleRate}" Min="0" Max="50"
+                                                             TargetProperty="View.TranslationY" Easing="{x:Static Easing.SpringOut}"/>
+                                </f:ContentControl.Behaviors>
+                            </f:ContentControl>
                             <f:ImageEx Grid.Row="1" Source="{f:ResourceImage Img.img_batman.png}"  
-                                         WidthRequest="300" HeightRequest="300" TranslationY="-100"
+                                         WidthRequest="300" HeightRequest="300" TranslationY="0"
                                          HorizontalOptions="Center" VerticalOptions="Start"
-                                         CacheType="Memory" Opacity="{Binding VisibleRate}"/>
+                                         CacheType="Memory" Opacity="{Binding VisibleRate}">
+                                
+                            </f:ImageEx>
                             <Label Grid.Row="1" Text="{Binding VisibleRate, StringFormat='{0:N3}'}" HorizontalOptions="Center" VerticalOptions="Center"/>
                         </Grid>
                     </DataTemplate>
