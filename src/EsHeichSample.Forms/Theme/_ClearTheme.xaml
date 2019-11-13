@@ -3,12 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:f="clr-namespace:EsHeichSample.Forms"
              mc:Ignorable="d"
              x:Class="EsHeichSample.Forms.Theme._ClearTheme">
     <ResourceDictionary>
         <!--#region Colors-->
         <Color x:Key="LightBkgColor">White</Color>
         <Color x:Key="PrimaryColor">Green</Color>
+        <!--#endregion-->
+        
+        <!--#region-->
+        <f:ToCarouselItemsConverter x:Key="cvt_toCrsViewItems"/>
         <!--#endregion-->
 
         <Style TargetType="{x:Type Span}">

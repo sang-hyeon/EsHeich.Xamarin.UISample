@@ -3,13 +3,68 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:f="clr-namespace:EsHeichSample.Forms"
              mc:Ignorable="d"
-             x:Class="EsHeichSample.Views.HomePage">
+             
+             x:Class="EsHeichSample.Views.HomePage"
+             Shell.NavBarIsVisible="False"
+             ios:Page.UseSafeArea="False"
+             BackgroundColor="DarkGray">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="items" Type="{x:Type Color}">
+                <Color>Red</Color>
+                <Color>Blue</Color>
+                <Color>Gold</Color>
+                <Color>Green</Color>
+                </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <CarouselView x:Name="crv_main" HorizontalScrollBarVisibility="Never"
+                          ItemsSource="{Binding ., Source={StaticResource items}, Converter={StaticResource cvt_toCrsViewItems}}">
+                <CarouselView.Behaviors>
+                    <f:CarouselViewItemsBehavior x:Name="crv_state"/>
+                </CarouselView.Behaviors>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="200"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <f:ContentControl Grid.Row="1"
+                                              BackgroundColor="{Binding BindingItem}" CornerRadius="10" BorderThickness="0"
+                                              Margin="20,50" HasShadow="True" Opacity="{Binding VisibleRate}"/>
+                            <f:ImageEx Grid.Row="1" Source="{f:ResourceImage Img.img_batman.png}"  
+                                         WidthRequest="300" HeightRequest="300" TranslationY="-100"
+                                         HorizontalOptions="Center" VerticalOptions="Start"
+                                         CacheType="Memory" Opacity="{Binding VisibleRate}"/>
+                            <Label Grid.Row="1" Text="{Binding VisibleRate, StringFormat='{0:N3}'}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Grid>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+            <Label VerticalOptions="Center" BindingContext="{Binding .,Source={x:Reference crv_state}}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{Binding HorizontalOffset}"/>
+                        <Span Style="{StaticResource style_LineBreak}"/>
+                        <Span Text="{Binding HorizontalDelta}"/>
+                        <Span Style="{StaticResource style_LineBreak}"/>
+                        <Span Text="{Binding FirstVisibleItemIndex}"/>
+                        <Span Style="{StaticResource style_LineBreak}"/>
+                        <Span Text="{Binding CenterItemIndex}"/>
+                        <Span Style="{StaticResource style_LineBreak}"/>
+                        <Span Text="{Binding LastVisibleItemIndex}"/>
+                        <Span Style="{StaticResource style_LineBreak}"/>
+                        <Span Text="{Binding RemainingItemsThreshold, Source={x:Reference crv_main}}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
