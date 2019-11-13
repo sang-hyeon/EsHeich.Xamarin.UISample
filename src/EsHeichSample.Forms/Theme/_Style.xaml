@@ -6,6 +6,10 @@
              mc:Ignorable="d"
              x:Class="EsHeichSample.Forms.Theme._Style">
 
+    <Style x:Key="style_LineBreak" TargetType="{x:Type Span}">
+        <Setter Property="Text" Value="&#x0a;"/>
+    </Style>
+    
     <Style x:Key="style_btn_Flat" TargetType="{x:Type Button}">
         <Setter Property="BorderWidth" Value="0"/>
     </Style>
