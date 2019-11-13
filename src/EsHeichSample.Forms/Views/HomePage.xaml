@@ -13,12 +13,33 @@
              BackgroundColor="White">
     <ContentPage.Resources>
         <ResourceDictionary>
+            <Style x:Key="style_lb_Title" TargetType="{x:Type Label}">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="70"/>
+                <Setter Property="CharacterSpacing" Value="10"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="End"/>
+                <Setter Property="TextColor" Value="WhiteSmoke"/>
+            </Style>
+            <Style x:Key="style_cctrl_Card" TargetType="{x:Type f:ContentControl}">
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Margin" Value="20,50"/>
+                <Setter Property="HasShadow" Value="True"/>
+            </Style>
+            <Style x:Key="style_imgEx_Hero" TargetType="{x:Type f:ImageEx}">
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="300"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="CacheType" Value="Memory"/>
+            </Style>
             <x:Array x:Key="items" Type="{x:Type Color}">
                 <Color>Red</Color>
                 <Color>Blue</Color>
                 <Color>Gold</Color>
                 <Color>Green</Color>
-                </x:Array>
+            </x:Array>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
@@ -35,33 +56,75 @@
                                 <RowDefinition Height="200"/>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
-                            <Label Text="BATMAN" FontAttributes="Bold" FontSize="70" CharacterSpacing="10"
-                                   HorizontalOptions="Center" VerticalOptions="End" TextColor="WhiteSmoke"/>
-                            <f:ContentControl Grid.Row="1"
-                                              BackgroundColor="{Binding BindingItem}" CornerRadius="10" BorderThickness="0"
-                                              Margin="20,50" HasShadow="True" Opacity="{Binding VisibleRate}">
+                            <Label Text="BATMAN" Style="{StaticResource style_lb_Title}"/>
+                            <f:ContentControl Grid.Row="1" BackgroundColor="{Binding BindingItem}" Style="{StaticResource style_cctrl_Card}">
                                 <f:ContentControl.Behaviors>
                                     <f:LinearSacleToBehavior x:TypeArguments="f:ContentControl"
                                                              Percentage="{Binding VisibleRate}" From="0" To="50"
                                                              TargetProperty="View.TranslationY" Easing="{x:Static Easing.SpringOut}"/>
                                     <f:ColorScaleToBehavior x:TypeArguments="f:ContentControl"
-                                                            Percentage="{Binding VisibleRate}" From="Black" To="{Binding BindingItem}"
+                                                            Percentage="{Binding VisibleRate}" From="LightGray" To="{Binding BindingItem}"
                                                             TargetProperty="View.BackgroundColor" Easing="{x:Static Easing.Linear}"/>
                                 </f:ContentControl.Behaviors>
                             </f:ContentControl>
-                            <f:ImageEx Grid.Row="1" Source="{f:ResourceImage Img.img_batman.png}"  
-                                         WidthRequest="300" HeightRequest="300"
-                                         HorizontalOptions="Center" VerticalOptions="Start"
-                                         CacheType="Memory" Opacity="{Binding VisibleRate}">
+
+                            <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="20"
+                                         HorizontalOptions="Center" VerticalOptions="Center">
+                                <BoxView Color="WhiteSmoke" WidthRequest="50" HeightRequest="50" Opacity="0"
+                                         HorizontalOptions="Center" VerticalOptions="Center">
+                                    <BoxView.Triggers>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding LocatedToCenter}" Value="True">
+                                            <DataTrigger.EnterActions>
+                                                <f:HardCodingAnimation IsIn="True"/>
+                                            </DataTrigger.EnterActions>
+                                            <DataTrigger.ExitActions>
+                                                <f:HardCodingAnimation IsIn="False"/>
+                                            </DataTrigger.ExitActions>
+                                        </DataTrigger>
+                                    </BoxView.Triggers>
+                                </BoxView>
+                                <BoxView Color="WhiteSmoke" WidthRequest="50" HeightRequest="50" Opacity="0"
+                                         HorizontalOptions="Center" VerticalOptions="Center">
+                                    <BoxView.Triggers>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding LocatedToCenter}" Value="True">
+                                            <DataTrigger.EnterActions>
+                                                <f:HardCodingAnimation IsIn="True" Razy_sec="1.2"/>
+                                            </DataTrigger.EnterActions>
+                                            <DataTrigger.ExitActions>
+                                                <f:HardCodingAnimation IsIn="False" Razy_sec="1.2"/>
+                                            </DataTrigger.ExitActions>
+                                        </DataTrigger>
+                                    </BoxView.Triggers>
+                                </BoxView>
+                                <BoxView Color="WhiteSmoke" WidthRequest="50" HeightRequest="50" Opacity="0"
+                                         HorizontalOptions="Center" VerticalOptions="Center">
+                                    <BoxView.Triggers>
+                                        <DataTrigger TargetType="BoxView" Binding="{Binding LocatedToCenter}" Value="True">
+                                            <DataTrigger.EnterActions>
+                                                <f:HardCodingAnimation IsIn="True" Razy_sec="1"/>
+                                            </DataTrigger.EnterActions>
+                                            <DataTrigger.ExitActions>
+                                                <f:HardCodingAnimation IsIn="False" Razy_sec="1"/>
+                                            </DataTrigger.ExitActions>
+                                        </DataTrigger>
+                                    </BoxView.Triggers>
+                                </BoxView>
+                            </StackLayout>
+                            <f:ImageEx Grid.Row="1" Source="{f:ResourceImage Img.img_batman.png}" 
+                                       Style="{StaticResource style_imgEx_Hero}" Opacity="{Binding VisibleRate}">
                                 <f:ImageEx.Behaviors>
                                     <f:LinearSacleToBehavior x:TypeArguments="f:ImageEx"
-                                                             Percentage="{Binding VisibleRate}" From="0" To="-100"
+                                                             Percentage="{Binding VisibleRate}" From="-200" To="-100"
                                                              TargetProperty="View.TranslationY" Easing="{x:Static Easing.CubicInOut}"/>
                                     <f:LinearSacleToBehavior x:TypeArguments="f:ImageEx"
                                                              Percentage="{Binding VisibleRate}" From="1.5" To="1"
                                                              TargetProperty="View.Scale" Easing="{x:Static Easing.Linear}"/>
+                                    <f:LinearSacleToBehavior x:TypeArguments="f:ImageEx"
+                                                             Percentage="{Binding VisibleRate}" From="-30" To="30"
+                                                             TargetProperty="View.TranslationX" Easing="{x:Static Easing.SinIn}"/>
                                 </f:ImageEx.Behaviors>
                             </f:ImageEx>
+
                             <Label Grid.Row="1" Text="{Binding VisibleRate, StringFormat='{0:N3}'}" HorizontalOptions="Center" VerticalOptions="Center"/>
                         </Grid>
                     </DataTemplate>
