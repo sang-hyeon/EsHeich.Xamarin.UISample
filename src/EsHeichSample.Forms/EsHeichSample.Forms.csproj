@@ -6,11 +6,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Img\img_aquaman.png" />
     <None Remove="Resources\Img\img_batman.png" />
+    <None Remove="Resources\Img\img_joker.png" />
+    <None Remove="Resources\Img\img_superman.png" />
+    <None Remove="Resources\Img\img_wonderwoman.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Img\img_aquaman.png" />
     <EmbeddedResource Include="Resources\Img\img_batman.png" />
+    <EmbeddedResource Include="Resources\Img\img_joker.png" />
+    <EmbeddedResource Include="Resources\Img\img_superman.png" />
+    <EmbeddedResource Include="Resources\Img\img_wonderwoman.png" />
   </ItemGroup>
 
   <ItemGroup>

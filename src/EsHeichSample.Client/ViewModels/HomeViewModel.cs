@@ -2,20 +2,41 @@
 namespace EsHeichSample.Client.ViewModels
 {
     using System;
-    using EsHeich.RepositoryPattern;
+    using System.Linq;
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+    using EsHeichSample.Client.Services;
 
     public class HomeViewModel : ViewModel
     {
-        readonly protected IUnitOfWorkFactory factory;
+        readonly protected IHeroService heroService;
 
-        public HomeViewModel(IUnitOfWorkFactory factory)
+        IEnumerable<HeroViewModel> _heroes;
+
+        public IEnumerable<HeroViewModel> Heroes
         {
-            this.factory = factory ??
-                throw new ArgumentNullException("factory");
+            get => _heroes;
+            set => SetProperty(ref _heroes, value);
         }
 
-        protected override void Prepare()
+        public HomeViewModel(IHeroService heroService) : base()
         {
+            this.heroService = heroService ??
+                throw new ArgumentNullException("factory");
+
+            Prepare();
+        }
+
+        protected async new void Prepare()
+        {
+            this.Heroes = await this.LoadHerosViaServiceAsync();
+        }
+
+        protected async Task<HeroViewModel[]> LoadHerosViaServiceAsync()
+        {
+            var heroes = await this.heroService.GetDcHeroesAsync();
+
+            return heroes.Select(x => new HeroViewModel(x)).ToArray();
         }
     }
 }

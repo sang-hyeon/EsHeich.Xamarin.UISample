@@ -14,6 +14,9 @@
         
         <!--#region-->
         <f:ToCarouselItemsConverter x:Key="cvt_toCrsViewItems"/>
+        <f:HexToColorConverter x:Key="cvt_hexToColor"/>
+        <f:StringToResourceImageConverer x:Key="cvt_stringToResourceImg"/>
+        <f:ToUpperConverter x:Key="cvt_toUpper"/>
         <!--#endregion-->
 
         <Style TargetType="{x:Type Span}">

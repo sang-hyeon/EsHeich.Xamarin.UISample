@@ -3,6 +3,7 @@ namespace EsHeichSample.Forms
 {   
     using Microsoft.EntityFrameworkCore;
     using Autofac;
+    using EsHeichSample.Client.Services;
     using EsHeichSample.Client.Datas;
     using EsHeichSample.Client.ViewModels;
     using EsHeich.RepositoryPattern;
@@ -12,10 +13,13 @@ namespace EsHeichSample.Forms
         public static IContainer BuildContainer()
         {
             var builder = new ContainerBuilder();
+            var context = CreateDatabase();
+            context.Migrate();
 
             builder.Register(x => new ContextFactory(CreateDatabase)).As<IUnitOfWorkFactory>();
 
-            RegisterViewModel(builder);
+            RegisterViewModel(ref builder);
+            RegisterService(ref builder);
 
             return builder.Build();
         }
@@ -26,10 +30,16 @@ namespace EsHeichSample.Forms
                                 .UseInMemoryDatabase(databaseName: "EsHeichMem")
                                 .Options;
 
-            return new EsHeichContext(options);
+            return new EsHeichContext(options);            
         }
 
-        public static void RegisterViewModel(ContainerBuilder builder)
+        public static void RegisterService(ref ContainerBuilder builder)
+        {
+            builder.RegisterType<HeroService>().As<IHeroService>().SingleInstance();
+
+        }
+
+        public static void RegisterViewModel(ref ContainerBuilder builder)
         {
             builder.RegisterType<HomeViewModel>();
         }

@@ -7,10 +7,11 @@ namespace EsHeichSample.Client.Datas
     using System.Collections.Generic;
     using Microsoft.EntityFrameworkCore;
     using EsHeichSample.Client.Models;
+    using System;
 
     public class EsHeichContext : DbContext
     {
-        DbSet<Hero> Heroes { get; set; }
+        public DbSet<Hero> Heroes { get; set; }
 
         public EsHeichContext(DbContextOptions options) : base(options)
         {
@@ -24,15 +25,19 @@ namespace EsHeichSample.Client.Datas
             builder.Entity<Hero>(q =>
             {
                 q.HasKey(x => x.ID);
+                q.Property(x => x.ID).ValueGeneratedOnAdd();
                 q.HasData(GetSeedFromResource());
             });
         }
+
+        public void Migrate()
+            => this.Database.EnsureCreated();
 
 
         protected Hero[] GetSeedFromResource()
         {
             var result = new List<string>();
-            var resourcePath = "EsHeichSample.Client.Resources.Datas.Hero.txt";
+            var resourcePath = "EsHeichSample.Client.Resources.Datas.Heros.txt";
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
             var resourceStream = assembly.GetManifestResourceStream(resourcePath);
@@ -44,14 +49,17 @@ namespace EsHeichSample.Client.Datas
                 }
             }
 
-            return result.Select(q =>
+            return result.Select((q,i) =>
             {
                 var splited = q.Split(',');
                 return new Hero
                 {
+                    ID = i + 1,
                     HeroName = splited[0],
                     RealName = splited[1],
-                    SignatureColor_Hex = splited[5]
+                    HeroImg = splited[2],
+                    Role = Enum.Parse<HeroRole>(splited[3]),
+                    SignatureColor_Hex = splited[6]
                 };
             }).ToArray();
         }
