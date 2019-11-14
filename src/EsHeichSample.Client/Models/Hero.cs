@@ -22,5 +22,7 @@ namespace EsHeichSample.Client.Models
         public HeroRole Role { get; set; }
 
         public string SignatureColor_Hex { get; set; }
+
+        public string HeroName_ko { get; set; }
     }
 }

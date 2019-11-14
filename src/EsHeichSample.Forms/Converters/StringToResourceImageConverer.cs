@@ -13,7 +13,10 @@ namespace EsHeichSample.Forms
         {
             if (value is string path)
             {
-                return ResourceImageExtension.FromResource("Img." + value);
+                if (string.IsNullOrEmpty(path))
+                    return (ImageSource)null;
+                else 
+                    return ResourceImageExtension.FromResource("Img." + value);
             }
             else if (value == null)
             {

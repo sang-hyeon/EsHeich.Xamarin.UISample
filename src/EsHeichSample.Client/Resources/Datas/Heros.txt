@@ -1,6 +1,7 @@
-﻿Batman,Bruce Wayne,img_batman.png,Hero,부자,img_batman_sign.png,#3A3A3A
-Superman,Clark Kent,img_superman.png,Hero,눈 레이저	,,#CD0000
-Wonder Woman,Diana Prince,img_wonderwoman.png,Hero,채찍,,#E56D29
-Joker,Mr.Rekoj,img_joker.png,Villain,입꼬리,,#0A6E0A
-Flash,Barry Allen,img_flash.png,Hero,달리기,,#B9062F
-Aquaman,Arthur Curry,img_aquaman.png,Hero,수영,,#2828CD
+﻿Batman,Bruce Wayne,img_batman.png,Hero,부자,img_batman_sign.png,#3A3A3A,고담시의 다크 나이트...,배트맨
+DC Comics,DC Comics,img_dc.png,Villain,눈 레이저,,#191970,배트맨이 먹여살리는 회사...,DC
+Superman,Clark Kent,img_superman.png,Hero,눈 레이저	,,#CD0000,도시를 지키기 위해 도시를 부신다...,슈퍼맨
+Wonder Woman,Diana Prince,img_wonderwoman.png,Hero,채찍,,#E56D29,갤 가돗..갤 가돗은 진리...,원더우먼
+Joker,Mr.Rekoj,img_joker.png,Villain,입꼬리,,#0A6E0A,이번 영화 잘 봤어...,조커
+Flash,Barry Allen,,Hero,달리기,,#B9062F,너는 레고 버전이 없니...?,플래쉬
+Aquaman,Arthur Curry,img_aquaman.png,Hero,수영,,#2828CD,블랙펜서하고 인기투표 해보자...,아쿠아맨

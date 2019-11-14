@@ -59,7 +59,9 @@ namespace EsHeichSample.Client.Datas
                     RealName = splited[1],
                     HeroImg = splited[2],
                     Role = Enum.Parse<HeroRole>(splited[3]),
-                    SignatureColor_Hex = splited[6]
+                    SignatureColor_Hex = splited[6],
+                    Summary = splited[7],
+                    HeroName_ko = splited[8]
                 };
             }).ToArray();
         }

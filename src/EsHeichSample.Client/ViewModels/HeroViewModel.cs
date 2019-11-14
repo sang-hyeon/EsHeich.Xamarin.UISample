@@ -13,9 +13,21 @@ namespace EsHeichSample.Client.ViewModels
         string _realName;
         string _imgPath;
         string _signatureColor;
+        string _comment;
+        string _heroName_ko;
         HeroRole _role;
 
 
+        public string HeroName_ko
+        {
+            get => _heroName_ko;
+            set => SetProperty(ref _heroName_ko, value);
+        }
+        public string Comment
+        {
+            get => _comment;
+            set => SetProperty(ref _comment, value);
+        }   
         public HeroRole Role
         {
             get => _role;
@@ -56,6 +68,8 @@ namespace EsHeichSample.Client.ViewModels
             this.ImgPath = this.original.HeroImg;
             this.SignatureColor = this.original.SignatureColor_Hex;
             this.Role = this.original.Role;
+            this.Comment = this.original.Summary;
+            this.HeroName_ko = this.original.HeroName_ko;
         }
     }
 }
