@@ -3,6 +3,7 @@ Xamarin.Forms로 작성된 샘플 애플리케이션입니다.
 
 ## 샘플 스크린
 클릭하면 샘플 영상이 있는 유튜브로 이동합니다.
+
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ROLUNfyuf1Q/0.jpg)](https://www.youtube.com/watch?v=ROLUNfyuf1Q)
 
 ### 주의 사항
