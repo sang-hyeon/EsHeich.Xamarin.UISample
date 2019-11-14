@@ -60,8 +60,9 @@
                             <f:ContentControl Grid.Row="1" BackgroundColor="{Binding BindingItem}" Style="{StaticResource style_cctrl_Card}">
                                 <f:ContentControl.Behaviors>
                                     <f:LinearSacleToBehavior x:TypeArguments="f:ContentControl"
-                                                             Percentage="{Binding VisibleRate}" From="0" To="50"
-                                                             TargetProperty="View.TranslationY" Easing="{x:Static Easing.SpringOut}"/>
+                                                             Percentage="{Binding VisibleRate}" 
+                                                             StartAt="0" EndAt="0.7" From="150" To="50"
+                                                             TargetProperty="View.TranslationY" Easing="{x:Static Easing.Linear}"/>
                                     <f:ColorScaleToBehavior x:TypeArguments="f:ContentControl"
                                                             Percentage="{Binding VisibleRate}" From="LightGray" To="{Binding BindingItem}"
                                                             TargetProperty="View.BackgroundColor" Easing="{x:Static Easing.Linear}"/>
@@ -111,16 +112,19 @@
                                 </BoxView>
                             </StackLayout>
                             <f:ImageEx Grid.Row="1" Source="{f:ResourceImage Img.img_batman.png}" 
-                                       Style="{StaticResource style_imgEx_Hero}" Opacity="{Binding VisibleRate}">
+                                       Style="{StaticResource style_imgEx_Hero}">
                                 <f:ImageEx.Behaviors>
                                     <f:LinearSacleToBehavior x:TypeArguments="f:ImageEx"
-                                                             Percentage="{Binding VisibleRate}" From="-200" To="-100"
+                                                             Percentage="{Binding VisibleRate}" 
+                                                             StartAt="0.4" EndAt="1"
+                                                             From="-200" To="-100"
                                                              TargetProperty="View.TranslationY" Easing="{x:Static Easing.CubicInOut}"/>
-                                    <f:LinearSacleToBehavior x:TypeArguments="f:ImageEx"
+                                    <!--<f:LinearSacleToBehavior x:TypeArguments="f:ImageEx"
                                                              Percentage="{Binding VisibleRate}" From="1.5" To="1"
-                                                             TargetProperty="View.Scale" Easing="{x:Static Easing.Linear}"/>
+                                                             TargetProperty="View.Scale" Easing="{x:Static Easing.Linear}"/>-->
                                     <f:LinearSacleToBehavior x:TypeArguments="f:ImageEx"
-                                                             Percentage="{Binding VisibleRate}" From="-30" To="30"
+                                                             Percentage="{Binding VisibleRate}" 
+                                                             StartAt="0" EndAt="0.7" From="-30" To="30"
                                                              TargetProperty="View.TranslationX" Easing="{x:Static Easing.SinIn}"/>
                                 </f:ImageEx.Behaviors>
                             </f:ImageEx>

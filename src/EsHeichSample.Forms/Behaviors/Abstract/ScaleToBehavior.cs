@@ -2,9 +2,7 @@
 namespace EsHeichSample.Forms
 {
     using System;
-    using System.Collections.Generic;
     using System.Runtime.CompilerServices;
-    using System.Text;
     using Xamarin.Forms;
 
     public abstract class ScaleToBehavior<TView, TTargetValue> : BehaviorBase<TView>
@@ -21,6 +19,24 @@ namespace EsHeichSample.Forms
                 typeof(double),
                 typeof(ScaleToBehavior<TView, TTargetValue>),
                 0d,
+                validateValue: ValidateValueDelegate);
+
+
+        public static readonly BindableProperty StartAtProperty =
+            BindableProperty.Create(
+                nameof(StartAt),
+                typeof(double),
+                typeof(ScaleToBehavior<TView,TTargetValue>),
+                0d,
+                validateValue: ValidateValueDelegate);
+
+
+        public static readonly BindableProperty EndAtProperty =
+            BindableProperty.Create(
+                nameof(EndAt),
+                typeof(double),
+                typeof(ScaleToBehavior<TView,TTargetValue>),
+                1d,
                 validateValue: ValidateValueDelegate);
 
         public static readonly BindableProperty FromProperty =
@@ -76,9 +92,18 @@ namespace EsHeichSample.Forms
             get => (double)GetValue(PercentageProperty);
             set => SetValue(PercentageProperty, value);
         }
+        public double EndAt
+        {
+            get => (double)GetValue(EndAtProperty);
+            set => SetValue(EndAtProperty, value);
+        }
+        public double StartAt
+        {
+            get => (double)GetValue(StartAtProperty);
+            set => SetValue(StartAtProperty, value);
+        }
 
-        public static bool ValidateValueDelegate
-            (BindableObject bindable, object value)
+        public static bool ValidateValueDelegate(BindableObject bindable, object value)
         {
             if (value is double percentage)
             {
@@ -111,7 +136,13 @@ namespace EsHeichSample.Forms
         }
         protected virtual bool Validate()
         {
-            return TargetProperty == null ? false : true;
+            if (StartAt <= Percentage & Percentage <= EndAt
+                & TargetProperty != null)
+            {
+                return true;
+            }
+            else
+                return false;
         }
 
         protected abstract TTargetValue ConvertCurrentValue();

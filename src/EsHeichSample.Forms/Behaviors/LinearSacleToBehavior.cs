@@ -9,10 +9,16 @@ namespace EsHeichSample.Forms
 
         protected override double ConvertCurrentValue()
         {
-            var easedValue = this.Easing.Ease(this.Percentage);
+            var factor = (Percentage - StartAt) / (EndAt - StartAt);
+            if (0 <= factor & factor <= 1)
+            {
+                var easedValue = this.Easing.Ease(factor);
 
-            var width = To - From;
-            return From + (width * easedValue);
+                var width = To - From;
+                return From + (width * easedValue);
+            }
+            else
+                return 0d;
         }
     }
 }
