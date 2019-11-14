@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Datas\Heros.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Datas\Heros.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="EsHeich.RepositoryPattern" Version="0.1.0" />
   </ItemGroup>
 

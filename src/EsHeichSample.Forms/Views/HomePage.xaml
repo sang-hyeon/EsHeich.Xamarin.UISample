@@ -8,9 +8,12 @@
              mc:Ignorable="d"
              
              x:Class="EsHeichSample.Views.HomePage"
+             BindingContext="{Binding HomeVM, Source={x:StaticResource locator}}"
+             
              Shell.NavBarIsVisible="False"
              ios:Page.UseSafeArea="False"
-             BackgroundColor="White">
+             BackgroundColor="White"
+             >
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="style_lb_Title" TargetType="{x:Type Label}">

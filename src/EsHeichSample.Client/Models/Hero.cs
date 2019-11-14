@@ -15,8 +15,12 @@ namespace EsHeichSample.Client.Models
 
         public string HeroImg { get; set; }
 
+        public string SuperPower { get; set; }
+
         public string Summary { get; set; }
 
         public HeroRole Role { get; set; }
+
+        public string SignatureColor_Hex { get; set; }
     }
 }

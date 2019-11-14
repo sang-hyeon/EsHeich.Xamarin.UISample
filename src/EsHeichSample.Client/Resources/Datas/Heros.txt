@@ -1,0 +1,6 @@
+﻿Batman	Bruce,Wayne,img_batman.png,Hero,부자,img_batman_sign.png,#3A3A3A
+Superman,Clark Kent,img_superman.png,Hero,눈 레이저	,,#CD0000
+Wonder Woman,Diana Prince,img_wonderwoman.png,Hero,채찍,,#E56D29
+Joker,Mr. Rekoj,img_joker.png,Villain,입꼬리,,#0A6E0A
+Flash	Barry,Allen,img_flash.png	,Hero	,달리기,,#B9062F
+Aquaman,Arthur Curry,img_aquaman.png,Hero,수영,,#2828CD

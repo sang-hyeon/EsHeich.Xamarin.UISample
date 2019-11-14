@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:theme ="clr-namespace:EsHeichSample.Forms.Theme"
+             xmlns:local="clr-namespace:EsHeichSample.Forms"
              mc:Ignorable="d"
              x:Class="EsHeichSample.App">
     <Application.Resources>
@@ -11,6 +12,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <theme:Theme/>
             </ResourceDictionary.MergedDictionaries>
+            <local:ViewModelLocator x:Key="locator"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
