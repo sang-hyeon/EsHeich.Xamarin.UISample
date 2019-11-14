@@ -3,7 +3,7 @@ Xamarin.Forms로 작성된 샘플 애플리케이션입니다.
 
 ## 샘플 스크린
 Gif 특성상 캡쳐의 스크린이 고르지 못합니다.
-![sample_screen](sample_screen/sample.gif)
+![sample_screen](sample_screen/screen.gif)
 
 ### 주의 사항
  - Xamarin.Forms의 CarouselView로 작성 되었는데, 현재까지 CarouselView는 정식 릴리스 버전이 아닙니다. (현재 Forms version 4.2). 
