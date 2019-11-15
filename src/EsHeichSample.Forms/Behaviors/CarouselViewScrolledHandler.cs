@@ -121,6 +121,30 @@ namespace EsHeichSample.Forms
 
     public class CarouselViewItemsBehavior : CarouselViewScrolledHandler
     {
+        protected override void OnAttachedTo(CarouselView bindable)
+        {
+            base.OnAttachedTo(bindable);
+            bindable.PropertyChanged += Element_PropertyChanged;
+        }
+        protected override void OnDetachingFrom(CarouselView bindable)
+        {
+            base.OnDetachingFrom(bindable);
+            bindable.PropertyChanged -= Element_PropertyChanged;
+        }
+
+        private void Element_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            switch(e.PropertyName)
+            {
+                case nameof(this.Element.ItemsSource):
+                    if (GetItemsSourceCount() > 0)
+                    {
+                        UpdateItemsSource_ViewState();
+                    }
+                    break;
+            }
+        }
+
         protected override void OnPropertyChanging([CallerMemberName] string propertyName = null)
         {
             base.OnPropertyChanging(propertyName); 
@@ -151,7 +175,19 @@ namespace EsHeichSample.Forms
         protected override void Bindable_Scrolled(object sender, ItemsViewScrolledEventArgs e)
         {
             base.Bindable_Scrolled(sender, e);
-
+            UpdateItemsSource_ViewState();
+        }
+        
+        public int? GetItemsSourceCount()
+        {
+            if (this.Element?.ItemsSource is ItemsViewItem<object>[] vItems)
+            {
+                return vItems?.Length;
+            }
+            else return null;
+        }
+        protected void UpdateItemsSource_ViewState()
+        {
             var items = this.Element.ItemsSource;
             if (items is ItemsViewItem<object>[] vItems)
             {
@@ -172,7 +208,7 @@ namespace EsHeichSample.Forms
                     CenterItemIndex == FirstVisibleItemIndex ?
                         LastVisibleItemIndex : FirstVisibleItemIndex;
 
-                if(viewRate > 0.5d)
+                if (viewRate > 0.5d)
                 {
                     vItems[CenterItemIndex].VisibleRate = viewRate;
                     if (CenterItemIndex != prevViewIndex)
