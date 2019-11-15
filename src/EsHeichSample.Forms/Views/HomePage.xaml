@@ -50,7 +50,7 @@
             <CarouselView x:Name="crv_main" HorizontalScrollBarVisibility="Never"
                           ItemsSource="{Binding Heroes, Converter={StaticResource cvt_toCrsViewItems}}">
                 <CarouselView.Behaviors>
-                    <f:CarouselViewItemsBehavior x:Name="crv_state"/>
+                    <f:CarouselViewItemHandlingBehavior x:Name="crv_state"/>
                 </CarouselView.Behaviors>
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
