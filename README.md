@@ -1,10 +1,25 @@
 ## Xamarin Sample App
+
 Xamarin.Forms로 작성된 샘플 애플리케이션입니다.
+이러한 Parallax Effect가 필요하신분께 도움이 될 수 있습니다.
+
+
 
 ## 샘플 스크린
 클릭하면 샘플 영상이 있는 유튜브로 이동합니다.
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ROLUNfyuf1Q/0.jpg)](https://www.youtube.com/watch?v=ROLUNfyuf1Q)
+
+
+
+## 타겟 플랫폼
+ - iOS Only
+
+
+## 작동 확인
+ - 시뮬레이터 iphone 11 (iOS 13) 
+ - (이 외 장치에서는 무조건 UI 레이아웃 깨질 것임.)
+ 
 
 ### 주의 사항
  - Xamarin.Forms의 CarouselView로 작성 되었는데, 현재까지 CarouselView는 정식 릴리스 버전이 아닙니다. (현재 Forms version 4.2). 
