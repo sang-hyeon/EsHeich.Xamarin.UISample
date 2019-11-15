@@ -21,37 +21,37 @@ namespace EsHeichSample.Client.ViewModels
         public string HeroName_ko
         {
             get => _heroName_ko;
-            set => SetProperty(ref _heroName_ko, value);
+            protected set => SetProperty(ref _heroName_ko, value);
         }
         public string Comment
         {
             get => _comment;
-            set => SetProperty(ref _comment, value);
+            protected set => SetProperty(ref _comment, value);
         }   
         public HeroRole Role
         {
             get => _role;
-            set => SetProperty(ref _role, value);
+            protected set => SetProperty(ref _role, value);
         }
         public string RealName
         {
             get => _realName;
-            private set => SetProperty(ref _realName, value);
+            protected set => SetProperty(ref _realName, value);
         }
         public string HeroName
         {
             get => _heroName;
-            private set => SetProperty(ref _heroName, value);
+            protected set => SetProperty(ref _heroName, value);
         }
         public string ImgPath
         {
             get => _imgPath;
-            private set => SetProperty(ref _imgPath, value);
+            protected set => SetProperty(ref _imgPath, value);
         }
         public string SignatureColor
         {
             get => _signatureColor;
-            private set => SetProperty(ref _signatureColor, value);
+            protected set => SetProperty(ref _signatureColor, value);
         }
 
         public HeroViewModel(Hero hero)
