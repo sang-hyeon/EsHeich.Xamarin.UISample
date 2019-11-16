@@ -52,6 +52,8 @@ namespace EsHeichSample.Client.ViewModels
 
         }
 
+        //WARNING: Xamarin의 Mono Framework속 리플렉션은 너무 느림.
+        //별로 좋은 방법이 아니지만 유효성 검사의 예를 보여줌.
         protected virtual bool IsValid(Hero hero)
         {
             var properties = typeof(Hero).GetProperties();
