@@ -87,6 +87,42 @@ namespace EsHeichSample.Client.UnitTests.ViewModelTests
             newHero.HeroName.Should().Be(newName);
         }
 
+
+        [Theory]
+        [AutoData]
+        public void Restore_should_restore_properties(Hero hero, string newHeroName, string newRealName)
+        {
+            //Arrange
+            var sut = new EditableHeroViewModel(hero);
+
+            sut.HeroName = newHeroName;
+            sut.RealName = newRealName;
+
+            //Action
+            sut.Restore();
+
+            //Assert
+            sut.ToModel().Should().BeEquivalentTo(hero);
+        }
+
+        [Theory]
+        [AutoData]
+        public void RestoreCommand_should_restore_properties
+            (Hero hero, string newHeroName, string newRealName, object param)
+        {
+            //Arrange
+            var sut = new EditableHeroViewModel(hero);
+
+            sut.HeroName = newHeroName;
+            sut.RealName = newRealName;
+
+            //Action
+            sut.RestoreCommand.Execute(param);
+
+            //Assert
+            sut.ToModel().Should().BeEquivalentTo(hero);
+        }
+
         /// <summary>
         /// ToModel은 엔티티의 속성이 유효하지 않으면 장애를 발생합니다.
         /// </summary>

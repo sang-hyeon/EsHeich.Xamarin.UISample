@@ -2,8 +2,8 @@
 namespace EsHeichSample.Client.ViewModels
 {
     using System;
+    using System.Windows.Input;
     using System.ComponentModel.DataAnnotations;
-    using EsHeichSample.Client.Datas;
     using EsHeichSample.Client.Models;
 
     public class EditableHeroViewModel : HeroViewModel
@@ -44,6 +44,12 @@ namespace EsHeichSample.Client.ViewModels
             get => base.SignatureColor;
             set => base.SignatureColor = value;
         }
+
+        public ICommand RestoreCommand
+            => new Command(() =>
+            {
+                Restore();
+            });
         #endregion
 
         public EditableHeroViewModel(Hero hero) 
@@ -70,6 +76,11 @@ namespace EsHeichSample.Client.ViewModels
             }
 
             return true;
+        }
+
+        public void Restore()
+        {
+            ProjectModel();
         }
 
         public Hero ToModel()
