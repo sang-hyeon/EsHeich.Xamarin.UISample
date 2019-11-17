@@ -172,14 +172,14 @@
       "EsHeichSample.Client.ViewModels.BindableObject": {
         "System.Boolean EsHeichSample.Client.ViewModels.BindableObject::SetProperty(T&,T,System.String,System.Action)": {
           "Lines": {
-            "14": 76,
-            "15": 76,
-            "16": 18,
-            "18": 58,
-            "19": 58,
-            "20": 58,
-            "21": 58,
-            "22": 76
+            "14": 99,
+            "15": 99,
+            "16": 20,
+            "18": 79,
+            "19": 79,
+            "20": 79,
+            "21": 79,
+            "22": 99
           },
           "Branches": [
             {
@@ -188,7 +188,7 @@
               "EndOffset": 22,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 18
+              "Hits": 20
             },
             {
               "Line": 15,
@@ -196,7 +196,7 @@
               "EndOffset": 26,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 58
+              "Hits": 79
             },
             {
               "Line": 19,
@@ -212,18 +212,18 @@
               "EndOffset": 47,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 58
+              "Hits": 79
             }
           ]
         },
         "System.Void EsHeichSample.Client.ViewModels.BindableObject::OnPropertyChanged(System.String)": {
           "Lines": {
-            "27": 58,
-            "28": 58,
-            "29": 58,
-            "30": 58,
+            "27": 79,
+            "28": 79,
+            "29": 79,
+            "30": 79,
             "32": 0,
-            "33": 58
+            "33": 79
           },
           "Branches": [
             {
@@ -240,7 +240,7 @@
               "EndOffset": 32,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 58
+              "Hits": 79
             }
           ]
         }
@@ -250,17 +250,17 @@
       "EsHeichSample.Client.ViewModels.ViewModel": {
         "System.Void EsHeichSample.Client.ViewModels.ViewModel::Prepare()": {
           "Lines": {
-            "12": 10,
-            "14": 10
+            "12": 15,
+            "14": 15
           },
           "Branches": []
         },
         "System.Void EsHeichSample.Client.ViewModels.ViewModel::.ctor()": {
           "Lines": {
-            "6": 10,
-            "7": 10,
-            "8": 10,
-            "9": 10
+            "6": 15,
+            "7": 15,
+            "8": 15,
+            "9": 15
           },
           "Branches": []
         }
@@ -512,7 +512,7 @@
         },
         "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::set_HeroName_ko(System.String)": {
           "Lines": {
-            "24": 10
+            "24": 13
           },
           "Branches": []
         },
@@ -524,7 +524,7 @@
         },
         "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::set_Comment(System.String)": {
           "Lines": {
-            "29": 10
+            "29": 13
           },
           "Branches": []
         },
@@ -536,19 +536,19 @@
         },
         "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::set_Role(EsHeichSample.Client.Models.HeroRole)": {
           "Lines": {
-            "34": 10
+            "34": 13
           },
           "Branches": []
         },
         "System.String EsHeichSample.Client.ViewModels.HeroViewModel::get_RealName()": {
           "Lines": {
-            "38": 6
+            "38": 9
           },
           "Branches": []
         },
         "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::set_RealName(System.String)": {
           "Lines": {
-            "39": 12
+            "39": 15
           },
           "Branches": []
         },
@@ -560,7 +560,7 @@
         },
         "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::set_HeroName(System.String)": {
           "Lines": {
-            "44": 14
+            "44": 17
           },
           "Branches": []
         },
@@ -572,7 +572,7 @@
         },
         "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::set_ImgPath(System.String)": {
           "Lines": {
-            "49": 10
+            "49": 13
           },
           "Branches": []
         },
@@ -584,31 +584,31 @@
         },
         "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::set_SignatureColor(System.String)": {
           "Lines": {
-            "54": 10
+            "54": 13
           },
           "Branches": []
         },
         "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::ProjectModel()": {
           "Lines": {
-            "65": 12,
-            "66": 12,
-            "67": 10,
-            "68": 10,
-            "69": 10,
-            "70": 10,
-            "71": 10,
-            "72": 10,
-            "73": 10
+            "65": 15,
+            "66": 15,
+            "67": 13,
+            "68": 13,
+            "69": 13,
+            "70": 13,
+            "71": 13,
+            "72": 13,
+            "73": 13
           },
           "Branches": []
         },
         "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::.ctor(EsHeichSample.Client.Models.Hero)": {
           "Lines": {
-            "57": 10,
-            "58": 10,
-            "59": 10,
-            "61": 10,
-            "62": 8
+            "57": 13,
+            "58": 13,
+            "59": 13,
+            "61": 13,
+            "62": 11
           },
           "Branches": []
         }
@@ -618,24 +618,24 @@
       "EsHeichSample.Client.ViewModels.HomeViewModel": {
         "System.Collections.Generic.IEnumerable`1<EsHeichSample.Client.ViewModels.HeroViewModel> EsHeichSample.Client.ViewModels.HomeViewModel::get_Heroes()": {
           "Lines": {
-            "18": 0
+            "18": 1
           },
           "Branches": []
         },
         "System.Void EsHeichSample.Client.ViewModels.HomeViewModel::set_Heroes(System.Collections.Generic.IEnumerable`1<EsHeichSample.Client.ViewModels.HeroViewModel>)": {
           "Lines": {
-            "19": 0
+            "19": 2
           },
           "Branches": []
         },
         "System.Void EsHeichSample.Client.ViewModels.HomeViewModel::.ctor(EsHeichSample.Client.Services.IHeroService)": {
           "Lines": {
-            "22": 0,
-            "23": 0,
-            "24": 0,
-            "25": 0,
-            "27": 0,
-            "28": 0
+            "22": 2,
+            "23": 2,
+            "24": 2,
+            "25": 2,
+            "27": 2,
+            "28": 2
           },
           "Branches": [
             {
@@ -652,7 +652,7 @@
               "EndOffset": 25,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 2
             }
           ]
         }
@@ -660,26 +660,18 @@
       "EsHeichSample.Client.ViewModels.HomeViewModel/<Prepare>d__6": {
         "System.Void EsHeichSample.Client.ViewModels.HomeViewModel/<Prepare>d__6::MoveNext()": {
           "Lines": {
-            "31": 0,
-            "32": 0,
-            "33": 0
+            "31": 2,
+            "32": 2,
+            "33": 2
           },
           "Branches": [
-            {
-              "Line": 32,
-              "Offset": 39,
-              "EndOffset": 41,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
             {
               "Line": 32,
               "Offset": 39,
               "EndOffset": 105,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 2
             }
           ]
         }
@@ -687,7 +679,7 @@
       "EsHeichSample.Client.ViewModels.HomeViewModel/<>c": {
         "EsHeichSample.Client.ViewModels.HeroViewModel EsHeichSample.Client.ViewModels.HomeViewModel/<>c::<LoadHerosViaServiceAsync>b__7_0(EsHeichSample.Client.Models.Hero)": {
           "Lines": {
-            "39": 0
+            "39": 5
           },
           "Branches": []
         }
@@ -695,26 +687,18 @@
       "EsHeichSample.Client.ViewModels.HomeViewModel/<LoadHerosViaServiceAsync>d__7": {
         "System.Void EsHeichSample.Client.ViewModels.HomeViewModel/<LoadHerosViaServiceAsync>d__7::MoveNext()": {
           "Lines": {
-            "36": 0,
-            "37": 0,
-            "40": 0
+            "36": 2,
+            "37": 2,
+            "40": 2
           },
           "Branches": [
-            {
-              "Line": 37,
-              "Offset": 53,
-              "EndOffset": 55,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
             {
               "Line": 37,
               "Offset": 53,
               "EndOffset": 123,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 2
             },
             {
               "Line": 39,
@@ -722,7 +706,7 @@
               "EndOffset": 169,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 39,
@@ -730,7 +714,7 @@
               "EndOffset": 192,
               "Path": 1,
               "Ordinal": 3,
-              "Hits": 0
+              "Hits": 2
             }
           ]
         }
@@ -820,55 +804,55 @@
       "EsHeichSample.Client.Models.Hero": {
         "System.Int32 EsHeichSample.Client.Models.Hero::get_ID()": {
           "Lines": {
-            "8": 87
+            "8": 93
           },
           "Branches": []
         },
         "System.String EsHeichSample.Client.Models.Hero::get_HeroName()": {
           "Lines": {
-            "11": 98
+            "11": 107
           },
           "Branches": []
         },
         "System.String EsHeichSample.Client.Models.Hero::get_RealName()": {
           "Lines": {
-            "14": 98
+            "14": 110
           },
           "Branches": []
         },
         "System.String EsHeichSample.Client.Models.Hero::get_HeroImg()": {
           "Lines": {
-            "16": 93
+            "16": 102
           },
           "Branches": []
         },
         "System.String EsHeichSample.Client.Models.Hero::get_SuperPower()": {
           "Lines": {
-            "18": 87
+            "18": 93
           },
           "Branches": []
         },
         "System.String EsHeichSample.Client.Models.Hero::get_Summary()": {
           "Lines": {
-            "20": 95
+            "20": 104
           },
           "Branches": []
         },
         "EsHeichSample.Client.Models.HeroRole EsHeichSample.Client.Models.Hero::get_Role()": {
           "Lines": {
-            "22": 95
+            "22": 104
           },
           "Branches": []
         },
         "System.String EsHeichSample.Client.Models.Hero::get_SignatureColor_Hex()": {
           "Lines": {
-            "24": 95
+            "24": 104
           },
           "Branches": []
         },
         "System.String EsHeichSample.Client.Models.Hero::get_HeroName_ko()": {
           "Lines": {
-            "26": 95
+            "26": 104
           },
           "Branches": []
         }
