@@ -1,0 +1,1017 @@
+{
+  "EsHeichSample.Client.dll": {
+    "C:\\Users\\sang-hyeon\\source\\repos\\EsHeichSample\\src\\EsHeichSample.Client\\Helpers\\Command.cs": {
+      "EsHeichSample.Client.Command": {
+        "System.Void EsHeichSample.Client.Command::.ctor(System.Action,System.Func`1<System.Boolean>)": {
+          "Lines": {
+            "10": 5,
+            "11": 2,
+            "12": 2
+          },
+          "Branches": []
+        }
+      },
+      "EsHeichSample.Client.Command`1": {
+        "System.Boolean EsHeichSample.Client.Command`1::CanExecute(System.Object)": {
+          "Lines": {
+            "29": 3,
+            "30": 3,
+            "31": 2,
+            "33": 1,
+            "34": 3
+          },
+          "Branches": [
+            {
+              "Line": 30,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 30,
+              "Offset": 7,
+              "EndOffset": 19,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 30,
+              "Offset": 22,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 31,
+              "Offset": 31,
+              "EndOffset": 33,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 31,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 2
+            },
+            {
+              "Line": 30,
+              "Offset": 22,
+              "EndOffset": 46,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void EsHeichSample.Client.Command`1::Execute(System.Object)": {
+          "Lines": {
+            "37": 4,
+            "38": 4,
+            "39": 3,
+            "40": 3,
+            "41": 3,
+            "42": 4
+          },
+          "Branches": [
+            {
+              "Line": 38,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 38,
+              "Offset": 7,
+              "EndOffset": 19,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 38,
+              "Offset": 22,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 3
+            },
+            {
+              "Line": 40,
+              "Offset": 32,
+              "EndOffset": 34,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 32,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 3
+            },
+            {
+              "Line": 38,
+              "Offset": 22,
+              "EndOffset": 45,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 4
+            }
+          ]
+        },
+        "System.Void EsHeichSample.Client.Command`1::RaiseCanExecuteChanged()": {
+          "Lines": {
+            "45": 1,
+            "46": 1,
+            "47": 1
+          },
+          "Branches": [
+            {
+              "Line": 46,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 46,
+              "Offset": 8,
+              "EndOffset": 13,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void EsHeichSample.Client.Command`1::.ctor(System.Action`1<TArg>,System.Func`2<TArg,System.Boolean>)": {
+          "Lines": {
+            "22": 7,
+            "23": 7,
+            "24": 7,
+            "25": 7,
+            "26": 7
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\sang-hyeon\\source\\repos\\EsHeichSample\\src\\EsHeichSample.Client\\ViewModels\\base\\BindableObject.cs": {
+      "EsHeichSample.Client.ViewModels.BindableObject": {
+        "System.Boolean EsHeichSample.Client.ViewModels.BindableObject::SetProperty(T&,T,System.String,System.Action)": {
+          "Lines": {
+            "14": 76,
+            "15": 76,
+            "16": 18,
+            "18": 58,
+            "19": 58,
+            "20": 58,
+            "21": 58,
+            "22": 76
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 20,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 18
+            },
+            {
+              "Line": 15,
+              "Offset": 20,
+              "EndOffset": 26,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 58
+            },
+            {
+              "Line": 19,
+              "Offset": 35,
+              "EndOffset": 39,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 35,
+              "EndOffset": 47,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 58
+            }
+          ]
+        },
+        "System.Void EsHeichSample.Client.ViewModels.BindableObject::OnPropertyChanged(System.String)": {
+          "Lines": {
+            "27": 58,
+            "28": 58,
+            "29": 58,
+            "30": 58,
+            "32": 0,
+            "33": 58
+          },
+          "Branches": [
+            {
+              "Line": 29,
+              "Offset": 14,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 14,
+              "EndOffset": 32,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 58
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\sang-hyeon\\source\\repos\\EsHeichSample\\src\\EsHeichSample.Client\\ViewModels\\base\\ViewModel.cs": {
+      "EsHeichSample.Client.ViewModels.ViewModel": {
+        "System.Void EsHeichSample.Client.ViewModels.ViewModel::Prepare()": {
+          "Lines": {
+            "12": 10,
+            "14": 10
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.ViewModel::.ctor()": {
+          "Lines": {
+            "6": 10,
+            "7": 10,
+            "8": 10,
+            "9": 10
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\sang-hyeon\\source\\repos\\EsHeichSample\\src\\EsHeichSample.Client\\ViewModels\\EditableHeroViewModel.cs": {
+      "EsHeichSample.Client.ViewModels.EditableHeroViewModel": {
+        "System.String EsHeichSample.Client.ViewModels.EditableHeroViewModel::get_HeroName()": {
+          "Lines": {
+            "14": 5
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.EditableHeroViewModel::set_HeroName(System.String)": {
+          "Lines": {
+            "15": 4
+          },
+          "Branches": []
+        },
+        "System.String EsHeichSample.Client.ViewModels.EditableHeroViewModel::get_RealName()": {
+          "Lines": {
+            "19": 5
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.EditableHeroViewModel::set_RealName(System.String)": {
+          "Lines": {
+            "20": 2
+          },
+          "Branches": []
+        },
+        "System.String EsHeichSample.Client.ViewModels.EditableHeroViewModel::get_Comment()": {
+          "Lines": {
+            "24": 5
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.EditableHeroViewModel::set_Comment(System.String)": {
+          "Lines": {
+            "25": 0
+          },
+          "Branches": []
+        },
+        "System.String EsHeichSample.Client.ViewModels.EditableHeroViewModel::get_HeroName_ko()": {
+          "Lines": {
+            "29": 5
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.EditableHeroViewModel::set_HeroName_ko(System.String)": {
+          "Lines": {
+            "30": 0
+          },
+          "Branches": []
+        },
+        "System.String EsHeichSample.Client.ViewModels.EditableHeroViewModel::get_ImgPath()": {
+          "Lines": {
+            "34": 4
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.EditableHeroViewModel::set_ImgPath(System.String)": {
+          "Lines": {
+            "35": 0
+          },
+          "Branches": []
+        },
+        "EsHeichSample.Client.Models.HeroRole EsHeichSample.Client.ViewModels.EditableHeroViewModel::get_Role()": {
+          "Lines": {
+            "39": 5
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.EditableHeroViewModel::set_Role(EsHeichSample.Client.Models.HeroRole)": {
+          "Lines": {
+            "40": 0
+          },
+          "Branches": []
+        },
+        "System.String EsHeichSample.Client.ViewModels.EditableHeroViewModel::get_SignatureColor()": {
+          "Lines": {
+            "44": 5
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.EditableHeroViewModel::set_SignatureColor(System.String)": {
+          "Lines": {
+            "45": 0
+          },
+          "Branches": []
+        },
+        "System.Windows.Input.ICommand EsHeichSample.Client.ViewModels.EditableHeroViewModel::get_RestoreCommand()": {
+          "Lines": {
+            "49": 1,
+            "50": 2,
+            "51": 2,
+            "52": 2
+          },
+          "Branches": []
+        },
+        "System.Boolean EsHeichSample.Client.ViewModels.EditableHeroViewModel::IsValid(EsHeichSample.Client.Models.Hero)": {
+          "Lines": {
+            "64": 4,
+            "65": 4,
+            "67": 69,
+            "68": 100,
+            "69": 7,
+            "70": 7,
+            "71": 7,
+            "72": 7,
+            "73": 7,
+            "74": 1,
+            "75": 6,
+            "76": 6,
+            "78": 3,
+            "79": 4
+          },
+          "Branches": [
+            {
+              "Line": 67,
+              "Offset": 128,
+              "EndOffset": 24,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 29
+            },
+            {
+              "Line": 68,
+              "Offset": 118,
+              "EndOffset": 43,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 7
+            },
+            {
+              "Line": 70,
+              "Offset": 69,
+              "EndOffset": 71,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 7
+            },
+            {
+              "Line": 73,
+              "Offset": 97,
+              "EndOffset": 99,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 73,
+              "Offset": 97,
+              "EndOffset": 104,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 6
+            },
+            {
+              "Line": 70,
+              "Offset": 69,
+              "EndOffset": 105,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 6
+            },
+            {
+              "Line": 68,
+              "Offset": 118,
+              "EndOffset": 120,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 28
+            },
+            {
+              "Line": 67,
+              "Offset": 128,
+              "EndOffset": 130,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 3
+            }
+          ]
+        },
+        "System.Void EsHeichSample.Client.ViewModels.EditableHeroViewModel::Restore()": {
+          "Lines": {
+            "82": 2,
+            "83": 2,
+            "84": 2
+          },
+          "Branches": []
+        },
+        "EsHeichSample.Client.Models.Hero EsHeichSample.Client.ViewModels.EditableHeroViewModel::ToModel()": {
+          "Lines": {
+            "87": 4,
+            "88": 4,
+            "89": 4,
+            "90": 4,
+            "91": 4,
+            "92": 4,
+            "93": 4,
+            "94": 4,
+            "95": 4,
+            "96": 4,
+            "97": 4,
+            "98": 4,
+            "99": 4,
+            "101": 4,
+            "102": 3,
+            "103": 1,
+            "104": 3
+          },
+          "Branches": [
+            {
+              "Line": 101,
+              "Offset": 143,
+              "EndOffset": 145,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 101,
+              "Offset": 143,
+              "EndOffset": 149,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void EsHeichSample.Client.ViewModels.EditableHeroViewModel::.ctor(EsHeichSample.Client.Models.Hero)": {
+          "Lines": {
+            "56": 7,
+            "57": 6,
+            "59": 6
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\sang-hyeon\\source\\repos\\EsHeichSample\\src\\EsHeichSample.Client\\ViewModels\\HeroViewModel.cs": {
+      "EsHeichSample.Client.ViewModels.HeroViewModel": {
+        "System.String EsHeichSample.Client.ViewModels.HeroViewModel::get_HeroName_ko()": {
+          "Lines": {
+            "23": 6
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::set_HeroName_ko(System.String)": {
+          "Lines": {
+            "24": 10
+          },
+          "Branches": []
+        },
+        "System.String EsHeichSample.Client.ViewModels.HeroViewModel::get_Comment()": {
+          "Lines": {
+            "28": 6
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::set_Comment(System.String)": {
+          "Lines": {
+            "29": 10
+          },
+          "Branches": []
+        },
+        "EsHeichSample.Client.Models.HeroRole EsHeichSample.Client.ViewModels.HeroViewModel::get_Role()": {
+          "Lines": {
+            "33": 6
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::set_Role(EsHeichSample.Client.Models.HeroRole)": {
+          "Lines": {
+            "34": 10
+          },
+          "Branches": []
+        },
+        "System.String EsHeichSample.Client.ViewModels.HeroViewModel::get_RealName()": {
+          "Lines": {
+            "38": 6
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::set_RealName(System.String)": {
+          "Lines": {
+            "39": 12
+          },
+          "Branches": []
+        },
+        "System.String EsHeichSample.Client.ViewModels.HeroViewModel::get_HeroName()": {
+          "Lines": {
+            "43": 6
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::set_HeroName(System.String)": {
+          "Lines": {
+            "44": 14
+          },
+          "Branches": []
+        },
+        "System.String EsHeichSample.Client.ViewModels.HeroViewModel::get_ImgPath()": {
+          "Lines": {
+            "48": 4
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::set_ImgPath(System.String)": {
+          "Lines": {
+            "49": 10
+          },
+          "Branches": []
+        },
+        "System.String EsHeichSample.Client.ViewModels.HeroViewModel::get_SignatureColor()": {
+          "Lines": {
+            "53": 6
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::set_SignatureColor(System.String)": {
+          "Lines": {
+            "54": 10
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::ProjectModel()": {
+          "Lines": {
+            "65": 12,
+            "66": 12,
+            "67": 10,
+            "68": 10,
+            "69": 10,
+            "70": 10,
+            "71": 10,
+            "72": 10,
+            "73": 10
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.HeroViewModel::.ctor(EsHeichSample.Client.Models.Hero)": {
+          "Lines": {
+            "57": 10,
+            "58": 10,
+            "59": 10,
+            "61": 10,
+            "62": 8
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\sang-hyeon\\source\\repos\\EsHeichSample\\src\\EsHeichSample.Client\\ViewModels\\HomeViewModel.cs": {
+      "EsHeichSample.Client.ViewModels.HomeViewModel": {
+        "System.Collections.Generic.IEnumerable`1<EsHeichSample.Client.ViewModels.HeroViewModel> EsHeichSample.Client.ViewModels.HomeViewModel::get_Heroes()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.HomeViewModel::set_Heroes(System.Collections.Generic.IEnumerable`1<EsHeichSample.Client.ViewModels.HeroViewModel>)": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.ViewModels.HomeViewModel::.ctor(EsHeichSample.Client.Services.IHeroService)": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": [
+            {
+              "Line": 24,
+              "Offset": 11,
+              "EndOffset": 13,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 11,
+              "EndOffset": 25,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "EsHeichSample.Client.ViewModels.HomeViewModel/<Prepare>d__6": {
+        "System.Void EsHeichSample.Client.ViewModels.HomeViewModel/<Prepare>d__6::MoveNext()": {
+          "Lines": {
+            "31": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": [
+            {
+              "Line": 32,
+              "Offset": 39,
+              "EndOffset": 41,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 39,
+              "EndOffset": 105,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "EsHeichSample.Client.ViewModels.HomeViewModel/<>c": {
+        "EsHeichSample.Client.ViewModels.HeroViewModel EsHeichSample.Client.ViewModels.HomeViewModel/<>c::<LoadHerosViaServiceAsync>b__7_0(EsHeichSample.Client.Models.Hero)": {
+          "Lines": {
+            "39": 0
+          },
+          "Branches": []
+        }
+      },
+      "EsHeichSample.Client.ViewModels.HomeViewModel/<LoadHerosViaServiceAsync>d__7": {
+        "System.Void EsHeichSample.Client.ViewModels.HomeViewModel/<LoadHerosViaServiceAsync>d__7::MoveNext()": {
+          "Lines": {
+            "36": 0,
+            "37": 0,
+            "40": 0
+          },
+          "Branches": [
+            {
+              "Line": 37,
+              "Offset": 53,
+              "EndOffset": 55,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 37,
+              "Offset": 53,
+              "EndOffset": 123,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 167,
+              "EndOffset": 169,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 167,
+              "EndOffset": 192,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\sang-hyeon\\source\\repos\\EsHeichSample\\src\\EsHeichSample.Client\\Services\\HeroService.cs": {
+      "EsHeichSample.Client.Services.HeroService": {
+        "System.Void EsHeichSample.Client.Services.HeroService::.ctor(EsHeich.RepositoryPattern.IUnitOfWorkFactory)": {
+          "Lines": {
+            "13": 3,
+            "14": 3,
+            "15": 3,
+            "16": 3,
+            "17": 3
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 11,
+              "EndOffset": 13,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 11,
+              "EndOffset": 25,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            }
+          ]
+        }
+      },
+      "EsHeichSample.Client.Services.HeroService/<GetDcHeroesAsync>d__2": {
+        "System.Void EsHeichSample.Client.Services.HeroService/<GetDcHeroesAsync>d__2::MoveNext()": {
+          "Lines": {
+            "20": 2,
+            "21": 2,
+            "22": 2,
+            "23": 2,
+            "24": 2,
+            "26": 2,
+            "27": 2,
+            "29": 2,
+            "30": 2
+          },
+          "Branches": [
+            {
+              "Line": 22,
+              "Offset": 46,
+              "EndOffset": 52,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 26,
+              "Offset": 103,
+              "EndOffset": 105,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 22,
+              "Offset": 46,
+              "EndOffset": 145,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 26,
+              "Offset": 103,
+              "EndOffset": 173,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\sang-hyeon\\source\\repos\\EsHeichSample\\src\\EsHeichSample.Client\\Models\\Hero.cs": {
+      "EsHeichSample.Client.Models.Hero": {
+        "System.Int32 EsHeichSample.Client.Models.Hero::get_ID()": {
+          "Lines": {
+            "8": 87
+          },
+          "Branches": []
+        },
+        "System.String EsHeichSample.Client.Models.Hero::get_HeroName()": {
+          "Lines": {
+            "11": 98
+          },
+          "Branches": []
+        },
+        "System.String EsHeichSample.Client.Models.Hero::get_RealName()": {
+          "Lines": {
+            "14": 98
+          },
+          "Branches": []
+        },
+        "System.String EsHeichSample.Client.Models.Hero::get_HeroImg()": {
+          "Lines": {
+            "16": 93
+          },
+          "Branches": []
+        },
+        "System.String EsHeichSample.Client.Models.Hero::get_SuperPower()": {
+          "Lines": {
+            "18": 87
+          },
+          "Branches": []
+        },
+        "System.String EsHeichSample.Client.Models.Hero::get_Summary()": {
+          "Lines": {
+            "20": 95
+          },
+          "Branches": []
+        },
+        "EsHeichSample.Client.Models.HeroRole EsHeichSample.Client.Models.Hero::get_Role()": {
+          "Lines": {
+            "22": 95
+          },
+          "Branches": []
+        },
+        "System.String EsHeichSample.Client.Models.Hero::get_SignatureColor_Hex()": {
+          "Lines": {
+            "24": 95
+          },
+          "Branches": []
+        },
+        "System.String EsHeichSample.Client.Models.Hero::get_HeroName_ko()": {
+          "Lines": {
+            "26": 95
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\sang-hyeon\\source\\repos\\EsHeichSample\\src\\EsHeichSample.Client\\Datas\\ContextFactory.cs": {
+      "EsHeichSample.Client.Datas.ContextFactory": {
+        "EsHeich.RepositoryPattern.IUnitOfWork EsHeichSample.Client.Datas.ContextFactory::CreateUnitOfWork()": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.Datas.ContextFactory::.ctor(System.Func`1<EsHeichSample.Client.Datas.EsHeichContext>)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\sang-hyeon\\source\\repos\\EsHeichSample\\src\\EsHeichSample.Client\\Datas\\EsHeichContext.cs": {
+      "EsHeichSample.Client.Datas.EsHeichContext": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<EsHeichSample.Client.Models.Hero> EsHeichSample.Client.Datas.EsHeichContext::get_Heroes()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.Datas.EsHeichContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": []
+        },
+        "System.Void EsHeichSample.Client.Datas.EsHeichContext::Migrate()": {
+          "Lines": {
+            "34": 0
+          },
+          "Branches": []
+        },
+        "EsHeichSample.Client.Models.Hero[] EsHeichSample.Client.Datas.EsHeichContext::GetSeedFromResource()": {
+          "Lines": {
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0
+          },
+          "Branches": [
+            {
+              "Line": 46,
+              "Offset": 73,
+              "EndOffset": 43,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 46,
+              "Offset": 73,
+              "EndOffset": 75,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 52,
+              "Offset": 98,
+              "EndOffset": 100,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 52,
+              "Offset": 98,
+              "EndOffset": 123,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void EsHeichSample.Client.Datas.EsHeichContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\sang-hyeon\\source\\repos\\EsHeichSample\\src\\EsHeichSample.Client\\Datas\\EsHeichContextDesignTime.cs": {
+      "EsHeichSample.Client.Datas.PerfectStudyContextDesignTime": {
+        "EsHeichSample.Client.Datas.EsHeichContext EsHeichSample.Client.Datas.PerfectStudyContextDesignTime::CreateDbContext(System.String[])": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
