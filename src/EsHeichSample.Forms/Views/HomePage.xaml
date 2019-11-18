@@ -9,7 +9,6 @@
              mc:Ignorable="d"
              
              x:Class="EsHeichSample.Views.HomePage"
-             x:DataType="vm:HomeViewModel"
              BindingContext="{Binding HomeVM, Source={x:StaticResource locator}}"
              
              Shell.NavBarIsVisible="False"
