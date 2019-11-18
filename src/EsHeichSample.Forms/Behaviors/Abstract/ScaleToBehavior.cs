@@ -4,6 +4,7 @@ namespace EsHeichSample.Forms
     using System;
     using System.Runtime.CompilerServices;
     using Xamarin.Forms;
+    using EsHeichSample.Client;
 
     public abstract class ScaleToBehavior<TView, TTargetValue> : BehaviorBase<TView>
         where TView : VisualElement
@@ -136,8 +137,7 @@ namespace EsHeichSample.Forms
         }
         protected virtual bool Validate()
         {
-            if (StartAt <= Percentage & Percentage <= EndAt
-                & TargetProperty != null)
+            if (Percentage.IsInRange(StartAt, EndAt) & TargetProperty != null)
             {
                 return true;
             }
