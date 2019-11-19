@@ -3,50 +3,50 @@ namespace EsHeichSample.Forms
 {
     using Xamarin.Forms;
 
-    public class CarouselViewScrolledHandler : Behavior<CarouselView>
+    public class ItemsViewExposingBehavior : Behavior<ItemsView>
     {
         #region Bindable Properties
         public static readonly BindableProperty HorizontalDeltaProperty =
             BindableProperty.Create(
                 nameof(HorizontalDelta),
                 typeof(double),
-                typeof(CarouselViewScrolledHandler));
+                typeof(ItemsViewExposingBehavior));
 
         public static readonly BindableProperty VerticalDeltaProperty =
             BindableProperty.Create(
                 nameof(VerticalDelta),
                 typeof(double),
-                typeof(CarouselViewScrolledHandler));
+                typeof(ItemsViewExposingBehavior));
 
         public static readonly BindableProperty HorizontalOffsetProperty =
             BindableProperty.Create(
                 nameof(HorizontalOffset),
                 typeof(double),
-                typeof(CarouselViewScrolledHandler));
+                typeof(ItemsViewExposingBehavior));
 
         public static readonly BindableProperty VerticalOffsetProperty =
             BindableProperty.Create(
                 nameof(VerticalOffset),
                 typeof(double),
-                typeof(CarouselViewScrolledHandler));
+                typeof(ItemsViewExposingBehavior));
 
         public static readonly BindableProperty FirstVisibleItemIndexProperty =
             BindableProperty.Create(
                 nameof(FirstVisibleItemIndex),
                 typeof(int),
-                typeof(CarouselViewScrolledHandler));
+                typeof(ItemsViewExposingBehavior));
 
         public static readonly BindableProperty CenterItemIndexProperty =
             BindableProperty.Create(
                 nameof(CenterItemIndex),
                 typeof(int),
-                typeof(CarouselViewScrolledHandler));
+                typeof(ItemsViewExposingBehavior));
 
         public static readonly BindableProperty LastVisibleItemIndexProperty =
             BindableProperty.Create(
                 nameof(LastVisibleItemIndex),
                 typeof(int),
-                typeof(CarouselViewScrolledHandler));
+                typeof(ItemsViewExposingBehavior));
 
         public int LastVisibleItemIndex
         {
@@ -85,23 +85,23 @@ namespace EsHeichSample.Forms
         }
         #endregion
 
-        public CarouselView Element { get; private set; }
+        public ItemsView Element { get; private set; }
         protected bool busy;
 
-        protected override void OnAttachedTo(CarouselView bindable)
+        protected override void OnAttachedTo(ItemsView bindable)
         {
             base.OnAttachedTo(bindable);
-            bindable.Scrolled += Bindable_Scrolled;
+            bindable.Scrolled += Element_Scrolled;
             this.Element = bindable;
         }
-        protected override void OnDetachingFrom(CarouselView bindable)
+        protected override void OnDetachingFrom(ItemsView bindable)
         {
             base.OnDetachingFrom(bindable);
-            bindable.Scrolled -= Bindable_Scrolled;
+            bindable.Scrolled -= Element_Scrolled;
             this.Element = null;
         }
 
-        protected virtual void Bindable_Scrolled(object sender, ItemsViewScrolledEventArgs e)
+        protected virtual void Element_Scrolled(object sender, ItemsViewScrolledEventArgs e)
         {
             this.HorizontalDelta = e.HorizontalDelta;
             this.HorizontalOffset = e.HorizontalOffset;

@@ -4,14 +4,17 @@ namespace EsHeichSample.Forms
     using System.Runtime.CompilerServices;
     using Xamarin.Forms;
 
-    public class CarouselViewItemHandlingBehavior : CarouselViewScrolledHandler
+    public class CarouselViewItemHandlingBehavior : ItemsViewExposingBehavior
     {
-        protected override void OnAttachedTo(CarouselView bindable)
+        public new CarouselView Element
+            => base.Element as CarouselView;
+
+        protected override void OnAttachedTo(ItemsView bindable)
         {
             base.OnAttachedTo(bindable);
             bindable.PropertyChanged += Element_PropertyChanged;
         }
-        protected override void OnDetachingFrom(CarouselView bindable)
+        protected override void OnDetachingFrom(ItemsView bindable)
         {
             base.OnDetachingFrom(bindable);
             bindable.PropertyChanged -= Element_PropertyChanged;
@@ -24,7 +27,7 @@ namespace EsHeichSample.Forms
                 case nameof(this.Element.ItemsSource):
                     if (GetItemsSourceCount() > 0)
                     {
-                        UpdateItemsSource_ViewState();
+                        UpdateViewStateViaItemsSource();
                     }
                     break;
             }
@@ -57,10 +60,10 @@ namespace EsHeichSample.Forms
             }
         }
 
-        protected override void Bindable_Scrolled(object sender, ItemsViewScrolledEventArgs e)
+        protected override void Element_Scrolled(object sender, ItemsViewScrolledEventArgs e)
         {
-            base.Bindable_Scrolled(sender, e);
-            UpdateItemsSource_ViewState();
+            base.Element_Scrolled(sender, e);
+            UpdateViewStateViaItemsSource();
         }
 
         public int? GetItemsSourceCount()
@@ -71,27 +74,16 @@ namespace EsHeichSample.Forms
             }
             else return null;
         }
-        protected void UpdateItemsSource_ViewState()
+
+        protected void UpdateViewStateViaItemsSource()
         {
-            var items = this.Element.ItemsSource;
-            if (items is ItemsViewItem<object>[] vItems)
+            if (this.Element.ItemsSource is ItemsViewItem<object>[] vItems)
             {
-                double size, offset = 0d;
-                if (this.Element.ItemsLayout.Orientation == ItemsLayoutOrientation.Horizontal)
-                {
-                    size = this.Element.Width;
-                    offset = this.HorizontalOffset;
-                }
-                else
-                {
-                    size = this.Element.Height;
-                    offset = this.VerticalOffset;
-                }
+                var (size, offset) = GetCurrentSizeAndOffsetByOrientaion();
 
                 var viewRate = ((offset + size) / size) % 1;
-                var prevViewIndex =
-                    CenterItemIndex == FirstVisibleItemIndex ?
-                        LastVisibleItemIndex : FirstVisibleItemIndex;
+                var prevViewIndex = CenterItemIndex == FirstVisibleItemIndex ?
+                                                                         LastVisibleItemIndex : FirstVisibleItemIndex;
 
                 if (viewRate > 0.5d)
                 {
@@ -105,6 +97,18 @@ namespace EsHeichSample.Forms
                     if (CenterItemIndex != prevViewIndex)
                         vItems[prevViewIndex].VisibleRate = viewRate;
                 }
+            }
+        }
+
+        protected (double, double) GetCurrentSizeAndOffsetByOrientaion()
+        {
+            if (this.Element.ItemsLayout.Orientation == ItemsLayoutOrientation.Horizontal)
+            {
+                return (this.Element.Width, this.HorizontalOffset);
+            }
+            else
+            {
+                return (this.Element.Height, this.VerticalOffset);
             }
         }
     }
