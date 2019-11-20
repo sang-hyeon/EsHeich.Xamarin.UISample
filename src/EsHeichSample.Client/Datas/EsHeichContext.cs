@@ -26,15 +26,22 @@ namespace EsHeichSample.Client.Datas
             {
                 q.HasKey(x => x.ID);
                 q.Property(x => x.ID).ValueGeneratedOnAdd();
-                q.HasData(GetSeedFromResource());
+                q.HasData(this.ReadHerosFromResource());
             });
         }
 
+        /// <summary>
+        /// 내부에서 실제 마이그레이션을 진행하지 않습니다.
+        /// Xamarin에 대한 샘플 프로젝트인 만큼, Data Layer는 간소화합니다.
+        /// </summary>
         public void Migrate()
             => this.Database.EnsureCreated();
 
+    }
 
-        protected Hero[] GetSeedFromResource()
+    public static class EsHeichContextExtensions
+    {
+        public static Hero[] ReadHerosFromResource(this EsHeichContext context)
         {
             var result = new List<string>();
             var resourcePath = "EsHeichSample.Client.Resources.Datas.Heros.txt";
@@ -49,7 +56,7 @@ namespace EsHeichSample.Client.Datas
                 }
             }
 
-            return result.Select((q,i) =>
+            return result.Select((q, i) =>
             {
                 var splited = q.Split(',');
                 return new Hero
