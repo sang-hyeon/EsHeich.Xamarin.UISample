@@ -29,7 +29,7 @@ namespace EsHeichSample.Client.UnitTests.ServiceTests
             HeroService sut = default;
             bool exception = false;
 
-            //Action
+            //Act
             try
             {
                 sut = new HeroService(factory.Object);
@@ -60,7 +60,7 @@ namespace EsHeichSample.Client.UnitTests.ServiceTests
             unitOfWork.Setup(q => q.GetRepository<Hero, int>()).Returns(stubRepo);
             factory.Setup(q => q.CreateUnitOfWork()).Returns(unitOfWork.Object);
 
-            //Action
+            //Act
             var foundHeroes = sut.GetDcHeroesAsync().Result;
 
             //Assert

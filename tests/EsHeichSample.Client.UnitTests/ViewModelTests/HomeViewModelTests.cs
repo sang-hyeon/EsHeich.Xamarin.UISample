@@ -28,7 +28,7 @@ namespace EsHeichSample.Client.UnitTests.ViewModelTests
             Action creating = () => new HomeViewModel(heroService.Object);
             bool exception = false;
 
-            //Action
+            //Act
             try
             {
                 creating.Invoke();
@@ -52,10 +52,10 @@ namespace EsHeichSample.Client.UnitTests.ViewModelTests
             heroService.Setup(x => x.GetDcHeroesAsync(It.IsAny<CancellationToken>()))
                                 .Returns(Task.FromResult(heroes));
 
-            //Action
+            //Act
             var sut = new HomeViewModel(heroService.Object);
 
-            //Action
+            //Assert
             sut.Heroes.Select(x=> x.RealName)
                 .Should().BeEquivalentTo(
                                     heroes.Select(x=> x.RealName));

@@ -25,7 +25,7 @@ namespace EsHeichSample.Client.UnitTests.HelperTests
             var action = new Action<MockData>((x) => observer = true);
             var sut = new Command<MockData>(action);
 
-            //Action
+            //Act
             sut.Execute(param);
 
             //Assert
@@ -43,7 +43,7 @@ namespace EsHeichSample.Client.UnitTests.HelperTests
             var canExcute = new Func<MockData,bool>((x) => true);
             var sut = new Command<MockData>(action, canExcute);
 
-            //Action
+            //Act
             var can = sut.CanExecute(param);
 
             //Assert
@@ -60,7 +60,7 @@ namespace EsHeichSample.Client.UnitTests.HelperTests
 
             using(var mt = sut.Monitor())
             {
-                //Action
+                //Act
                 sut.RaiseCanExecuteChanged();
 
                 //Aseert
@@ -80,7 +80,7 @@ namespace EsHeichSample.Client.UnitTests.HelperTests
             var canExcute = new Func<bool>(() => { observer_canExecute = true; return true; });
             var sut = new Command(action, canExcute);
 
-            //Action
+            //Act
             sut.CanExecute(param);
             sut.Execute(param);
 

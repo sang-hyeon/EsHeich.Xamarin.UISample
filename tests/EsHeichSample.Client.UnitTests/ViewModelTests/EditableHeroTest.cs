@@ -30,7 +30,7 @@ namespace EsHeichSample.Client.UnitTests.ViewModelTests
             Action creating = () => new EditableHeroViewModel(hero);
             bool exception = false;
 
-            //Action
+            //Act
             try
             {
                 creating.Invoke();
@@ -56,7 +56,7 @@ namespace EsHeichSample.Client.UnitTests.ViewModelTests
             //Arrange
             EditableHeroViewModel sut = default;
 
-            //Action
+            //Act
             sut = new EditableHeroViewModel(hero);
 
             //Assert
@@ -78,7 +78,7 @@ namespace EsHeichSample.Client.UnitTests.ViewModelTests
             //Arrange
             var sut = new EditableHeroViewModel(hero);
 
-            //Action
+            //Act
             sut.HeroName = newName;
             var newHero = sut.ToModel();
 
@@ -98,7 +98,7 @@ namespace EsHeichSample.Client.UnitTests.ViewModelTests
             sut.HeroName = newHeroName;
             sut.RealName = newRealName;
 
-            //Action
+            //Act
             sut.Restore();
 
             //Assert
@@ -116,7 +116,7 @@ namespace EsHeichSample.Client.UnitTests.ViewModelTests
             sut.HeroName = newHeroName;
             sut.RealName = newRealName;
 
-            //Action
+            //Act
             sut.RestoreCommand.Execute(param);
 
             //Assert
@@ -134,7 +134,7 @@ namespace EsHeichSample.Client.UnitTests.ViewModelTests
             var newHeroName = Enumerable.Range(0, 200).Select(x => newName).Aggregate((a, b) => a + b);
             var sut = new EditableHeroViewModel(hero);
 
-            //Action
+            //Act
             sut.HeroName = newHeroName;
             var toModel = new Action(()=> sut.ToModel());
 

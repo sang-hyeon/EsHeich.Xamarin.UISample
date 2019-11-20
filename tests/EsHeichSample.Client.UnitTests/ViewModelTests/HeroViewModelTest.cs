@@ -26,7 +26,7 @@ namespace EsHeichSample.Client.UnitTests.ViewModelTests
             Action creating = ()=> new HeroViewModel(hero);
             bool exception = false;
 
-            //Action
+            //Act
             try {
                 creating.Invoke();
             }
@@ -50,7 +50,7 @@ namespace EsHeichSample.Client.UnitTests.ViewModelTests
             //Arrange
             HeroViewModel sut = default;
 
-            //Action
+            //Act
             sut = new HeroViewModel(hero);
 
             //Assert

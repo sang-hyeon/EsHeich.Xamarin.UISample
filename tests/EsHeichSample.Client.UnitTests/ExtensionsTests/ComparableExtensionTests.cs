@@ -19,7 +19,7 @@ namespace EsHeichSample.Client.UnitTests.ExtensionsTests
             (int min, int value, int max, bool expect)
         {
             //Arrange
-            //Action            
+            //Act            
             var inRange = value.IsInRange(min, max);
 
             //Assert
@@ -35,7 +35,7 @@ namespace EsHeichSample.Client.UnitTests.ExtensionsTests
             (float min, float value, float max, bool expect)
         {
             //Arrange
-            //Action            
+            //Act            
             var inRange = value.IsInRange(min, max);
 
             //Assert
@@ -51,7 +51,7 @@ namespace EsHeichSample.Client.UnitTests.ExtensionsTests
             (double min, double value, double max, bool expect)
         {
             //Arrange
-            //Action            
+            //Act            
             var inRange = value.IsInRange(min, max);
 
             //Assert
