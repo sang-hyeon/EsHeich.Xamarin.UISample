@@ -12,21 +12,21 @@ namespace EsHeichSample.Forms
     public class HardCodingAnimation : TriggerAction<VisualElement>
     {
         public bool IsIn { get; set; }
-        public double Razy_sec { get; set; } = 0.5;
+        public double Lazy_sec { get; set; } = 0.5;
 
         protected async override void Invoke(VisualElement sender)
         {
             if (IsIn)
             {
                 ViewExtensions.CancelAnimations(sender);
-                await Task.Delay(TimeSpan.FromSeconds(Razy_sec));
+                await Task.Delay(TimeSpan.FromSeconds(Lazy_sec));
                 _ = sender.FadeTo(1, 300, Easing.Linear);
                 _ = sender.TranslateTo(0, -150, 300, Easing.Linear);
             }
             else
             {
                 ViewExtensions.CancelAnimations(sender);
-                await Task.Delay(TimeSpan.FromSeconds(Razy_sec));
+                await Task.Delay(TimeSpan.FromSeconds(Lazy_sec));
                 _ = sender.FadeTo(0, 300, Easing.Linear);
                 _ = sender.TranslateTo(0, 0, 300, Easing.Linear);
             }
