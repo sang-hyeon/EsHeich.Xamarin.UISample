@@ -137,7 +137,9 @@ namespace EsHeichSample.Forms
         }
         protected virtual bool Validate()
         {
-            if (Percentage.IsInRange(StartAt, EndAt) & TargetProperty != null)
+            if (Percentage.IsInRange(StartAt, EndAt) 
+                & TargetProperty != null
+                & AssociatedObject != null)
             {
                 return true;
             }
