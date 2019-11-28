@@ -13,9 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsHeichSample.iOS", "src\Es
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EsHeichSample.Forms", "src\EsHeichSample.Forms\EsHeichSample.Forms.csproj", "{6F9774C1-871B-42AF-A6D9-5CF23142CB7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsHeichSample.Client.UnitTests", "tests\EsHeichSample.Client.UnitTests\EsHeichSample.Client.UnitTests.csproj", "{99B4725D-757D-460C-A014-CCE8C3A4B0E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EsHeichSample.Client.UnitTests", "tests\EsHeichSample.Client.UnitTests\EsHeichSample.Client.UnitTests.csproj", "{99B4725D-757D-460C-A014-CCE8C3A4B0E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsHeichSample.Client", "src\EsHeichSample.Client\EsHeichSample.Client.csproj", "{32D34085-EE51-414E-A772-7673D44E2567}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EsHeichSample.Client", "src\EsHeichSample.Client\EsHeichSample.Client.csproj", "{32D34085-EE51-414E-A772-7673D44E2567}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsHeichSample.Forms.UnitTests", "tests\EsHeichSample.Forms.UnitTests\EsHeichSample.Forms.UnitTests.csproj", "{18B421FE-FF84-4185-ADC7-AF68FDBBDD42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +93,18 @@ Global
 		{32D34085-EE51-414E-A772-7673D44E2567}.Release|iPhone.Build.0 = Release|Any CPU
 		{32D34085-EE51-414E-A772-7673D44E2567}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{32D34085-EE51-414E-A772-7673D44E2567}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{18B421FE-FF84-4185-ADC7-AF68FDBBDD42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18B421FE-FF84-4185-ADC7-AF68FDBBDD42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18B421FE-FF84-4185-ADC7-AF68FDBBDD42}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{18B421FE-FF84-4185-ADC7-AF68FDBBDD42}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{18B421FE-FF84-4185-ADC7-AF68FDBBDD42}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{18B421FE-FF84-4185-ADC7-AF68FDBBDD42}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{18B421FE-FF84-4185-ADC7-AF68FDBBDD42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18B421FE-FF84-4185-ADC7-AF68FDBBDD42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18B421FE-FF84-4185-ADC7-AF68FDBBDD42}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{18B421FE-FF84-4185-ADC7-AF68FDBBDD42}.Release|iPhone.Build.0 = Release|Any CPU
+		{18B421FE-FF84-4185-ADC7-AF68FDBBDD42}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{18B421FE-FF84-4185-ADC7-AF68FDBBDD42}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +113,7 @@ Global
 		{6F9774C1-871B-42AF-A6D9-5CF23142CB7C} = {980DF19C-D0FC-43D5-81A9-B831FB884D32}
 		{99B4725D-757D-460C-A014-CCE8C3A4B0E1} = {64ED9663-866E-4102-9B29-2D8D7474DC69}
 		{32D34085-EE51-414E-A772-7673D44E2567} = {980DF19C-D0FC-43D5-81A9-B831FB884D32}
+		{18B421FE-FF84-4185-ADC7-AF68FDBBDD42} = {64ED9663-866E-4102-9B29-2D8D7474DC69}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B4E6168-7FC8-4DEF-9A7F-DCC8CB9321C8}
